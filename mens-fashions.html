@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECOMMERCE MARKET</title>
+    <link rel="stylesheet" href="style.CSS" />
+   
+ <!-- Lien Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+<body>
+
+ <!-- Icône appareil photo -->
+
+  <header>
+  <div class="barre1">
+      <div class="container">
+       <div class="text">
+       <h2><span>Ecommerce</span> Market</h2><br/>
+       <p>The Best Collections</p>
+      </div>
+<section class="MG">
+   <div class="categories">
+      <input type="All Categories" placeholder=" All Categories"><button><i class="fa-solid fa-caret-down"></i></button><br/>
+  </div>
+    <div class="produit ">
+            <input type="text" placeholder="Search produits..."><button><i class="fa-solid fa-search"></i></button>
+    </div>
+    </section>
+
+    <div class="recherche">
+      <a href="#">Mon Compte</a>
+      <a href="#">Panier</a>
+      <a href="#" class="btn-logout">Déconnexion</a>
+    </div>
+    </div>
+   </div>
+   
+  </div>
+
+
+     <!--Barre 2: Menu-->
+
+    <div class="barre2">
+       <div class="container">
+          <nav>
+
+           <ul>
+              <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link" href="mens-fashions.html">Mode Masculine</a></li>
+              <li class="nav-item"><a class="nav-link" href="women-fashion.html">Mode Féminine</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop.html">Boutique</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="buy-now.html">Achetez maintenant</a></li>
+            </ul>
+              </nav>
+            <div class="icones">
+              <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="buy-now.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+             
+            </div>
+
+            </div>
+    </header>
+
+<section class="femme">
+    <div class="mwassi">
+      <h3>Mode Féminine 2026</h3>
+    </div>
+</section>
+
+<div class="hero-text">
+    <h4>Nouvelle Collection</h4>
+    <h1>Mode Féminine</h1>
+    <p>
+        Découvrez des vêtements élégants, modernes et confortables,
+        conçus pour révéler votre style au quotidien.
+    </p>
+    <a href="boutique-homme.html" class="btn-shop">Découvrir la collection</a>
+</div>
+
+<section class="banner">
+  <img src="image/homme.webp" alt="Rayon habillement">
+</section> 
+
+<section class="mode"> <br> <br> 
+    <h1>Notre Collection Mode</h1>
+    <p>Découvrez nos vêtements tendance pour toute la famille.</p> <br>
+    <!-- <div class="filtre"> -->
+        <label for="categorie">Choisir une catégorie :</label>
+        <select id="categorie" onchange="filtrerCategorie()">
+            <option value="all">Toutes les catégories</option>
+            <option value="homme">Homme</option>
+            <option value="enfant">Enfant</option>
+            <option value="chaussure">Chaussures</option>
+            <option value="accessoire">Accessoires</option>
+        </select>
+    <!-- </div> -->
+
+  <div class="galerie">
+
+    <!-- HOMME -->
+    <div class="carte homme">
+        <img src="image/chemise.webp" alt="Chemise de haute couture">
+        <h3>Chemise Homme</h3>
+    </div>
+
+    <div class="carte homme">
+        <img src="image/Costume (2).webp" alt="Un costume classe pour une personne classe">
+        <h3>Costume Homme</h3>
+    </div>
+
+    <div class="carte homme">
+        <img src="image/chemise homme.webp" alt="">
+        <h3>T-shirt Homme</h3>
+    </div>
+
+    <!-- ENFANT -->
+    <div class="carte enfant">
+        <img src="image/complet enfant.webp" alt="">
+        <h3>Ensemble Garçon</h3>
+    </div>
+
+    <div class="carte enfant">
+        <img src="image/t-shirt enfant.webp" alt="">
+        <h3>T-shirt Enfant</h3>
+    </div>
+
+    <!-- CHAUSSURES -->
+    <div class="carte chaussure">
+        <img src="image/basket enfant.webp" alt="">
+        <h3>Baskets</h3>
+    </div>
+
+    <div class="carte chaussure">
+        <img src="image/Basket.webp" alt="">
+        <h3>Chaussures Ville</h3>
+    </div>
+
+    <div class="carte chaussure">
+        <img src="image/escarpins H.webp" alt="La chaussure qui démarque">
+        <h3>Escarpins</h3>
+    </div>
+
+    <!-- ACCESSOIRES -->
+    <div class="carte accessoire">
+        <img src="image/montres.webp" alt="">
+        <h3>Montre</h3>
+    </div>
+
+    <div class="carte accessoire">
+        <img src="image/lunette.webp" alt="">
+        <h3>Lunettes</h3>
+    </div>
+
+</div>
+
+</section>
+
+<script>
+
+function filtrerCategorie(){
+
+    let categorie=document.getElementById("categorie").value;
+
+    let cartes=document.querySelectorAll(".carte");
+
+    cartes.forEach(function(carte){
+
+        if(categorie==="all"){
+            carte.style.display="block";
+        }
+
+        else{
+
+            if(carte.classList.contains(categorie)){
+                carte.style.display="block";
+            }
+
+            else{
+                carte.style.display="none";
+            }
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+<footer>
+
+    <p>
+        © 2026 E-commerce Market | Tous droits réservés.
+    </p>
+
+</footer>
+</html>
